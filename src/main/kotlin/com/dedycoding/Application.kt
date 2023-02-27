@@ -1,5 +1,7 @@
 package com.dedycoding
 
+import com.dedycoding.features.login.configureLoginRouting
+import com.dedycoding.features.register.configureRegisterRouting
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.cio.*
@@ -12,5 +14,7 @@ fun main() {
 
 fun Application.module() {
     configureSerialization()
+    configureLoginRouting()
+    configureRegisterRouting()
     configureRouting()
 }
